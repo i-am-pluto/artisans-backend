@@ -18,7 +18,10 @@ connectDB();
 app.use(
   cors({
     credentials: true,
-    origin: "https://artisans-and-co-3s5c.onrender.com/",
+    origin: [
+      "https://artisans-and-co-3s5c.onrender.com/",
+      "http://localhost:3000/",
+    ],
   })
 );
 
