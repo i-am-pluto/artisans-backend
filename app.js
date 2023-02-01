@@ -10,15 +10,6 @@ const bodyParser = require("body-parser");
 const MongoStore = require("connect-mongo");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const { retrieveSession } = require("./Services/StripeAccnt");
-const { getOrderByPaymentIntent } = require("./Services/OrderService");
-const { removeProductFromCart } = require("./Repositories/CartRepository");
-const cartService = require("./Services/CartService");
-const artistService = require("./Services/ArtistService");
-const { indexAllProducts } = require("./Services/SearchEngineService");
-const {
-  generateAllRecommendations,
-} = require("./Repositories/SearchRecommendationRepository");
 
 require("dotenv").config();
 const app = express();
