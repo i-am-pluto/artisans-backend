@@ -59,8 +59,8 @@ app.use(passport.session());
 
 app.use(routes);
 
-// const port = 5000;
+const port = 5000;
 
-app.listen(() => {
+app.listen(port, () => {
   console.log(`server started`);
 });
