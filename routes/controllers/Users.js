@@ -85,7 +85,6 @@ router.post("/register", async (req, res, next) => {
         res.json({
           message: "Succesfully Created Your Account",
           success: true,
-          url: artist.url,
         });
       } else if (newuser.customer) {
         const customer = await markUserCustomer(newuser._id);
