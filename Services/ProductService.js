@@ -291,7 +291,7 @@ const addCategoriesToProducts = async (categories, product_id) => {
   const cats = await generateProductCategories(categories, product_id);
   const product = await productRepository.getProductById(product_id);
   product.categories = cats;
-  const savedProduct = productRepository.updateProduct(product);
+  const savedProduct = await productRepository.updateProduct(product);
   await indexAproduct(savedProduct);
   return savedProduct;
 };
