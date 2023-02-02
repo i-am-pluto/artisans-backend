@@ -80,14 +80,14 @@ router.post("/register", async (req, res, next) => {
           success: true,
           url: artist.url,
         });
-      } else if (saveduser.artist) {
+      } else if (newuser.artist) {
         const artist = await markUserArtist(newuser._id);
         res.json({
           message: "Succesfully Created Your Account",
           success: true,
           url: artist.url,
         });
-      } else if (saveduser.customer) {
+      } else if (newuser.customer) {
         const customer = await markUserCustomer(newuser._id);
 
         res.json({
