@@ -17,6 +17,7 @@ const indexAllProducts = async () => {
 };
 
 const indexAproduct = async (product) => {
+  console.log(product);
   const artist = await getArtistById(product.artist.artist_id);
   let price = 0;
   if (product.varients.length) price = product.varients[0].price;
